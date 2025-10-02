@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <!-- Loading Screen -->
+      <div class="loading-screen" id="loadingScreen">
+          <div class="loader">
+              <div class="circle">
+                  <div class="dot"></div>
+                  <div class="outline"></div>
+              </div>
+              <div class="circle">
+                  <div class="dot"></div>
+                  <div class="outline"></div>
+              </div>
+              <div class="circle">
+                  <div class="dot"></div>
+                  <div class="outline"></div>
+              </div>
+              <div class="circle">
+                  <div class="dot"></div>
+                  <div class="outline"></div>
+              </div>
+          </div>
+          <div class="loading-text">جاري التحميل...</div>
+      </div>
+      
+      <div class="container"></div>
+      
+      <div class="card-nav-container">
+        <nav class="card-nav" id="cardNav">
+            <div class="card-nav-top">
+                <div class="hamburger-menu" id="hamburgerMenu" role="button" aria-label="فتح القائمة" tabindex="0">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </div>
+
+                <div class="logo-container">
+                    <img src="img/image_0.png" alt="شعار الموقع" class="logo">
+                </div>
+
+                <button type="button" class="card-nav-cta-button">
+                    ابدأ الآن
+                </button>
+            </div>
+
+            <div class="card-nav-content" id="cardNavContent" aria-hidden="true">
+                <div class="nav-card" style="background-color: #f8f9fa; color: #333;">
+                    <div class="nav-card-label">الخدمات</div>
+                    <div class="nav-card-links">
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            تطوير المواقع
+                        </a>
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            التصميم الجرافيكي
+                        </a>
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            التسويق الرقمي
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-card" style="background-color: #e3f2fd; color: #1565c0;">
+                    <div class="nav-card-label">الحلول</div>
+                    <div class="nav-card-links">
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            حلول الشركات
+                        </a>
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            حلول الأفراد
+                        </a>
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            الاستشارات
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-card" style="background-color: #f3e5f5; color: #7b1fa2;">
+                    <div class="nav-card-label">الموارد</div>
+                    <div class="nav-card-links">
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            المدونة
+                        </a>
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            الدروس
+                        </a>
+                        <a href="#" class="nav-card-link">
+                            <span class="nav-card-link-icon">↗</span>
+                            الدعم
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Mobile Logo -->
+        <div class="mobile-logo">
+            <img src="img/image_0.png" alt="شعار الموقع" class="mobile-logo-img">
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="typewriter-text" id="typewriterText"></span>
+                <span class="typewriter-cursor">|</span>
+            </h1>
+            <p class="hero-description">
+                <span class="typewriter-description" id="typewriterDescription"></span>
+                <span class="typewriter-cursor-desc">|</span>
+            </p>
+            <div class="hero-buttons">
+
+                <button class="btn btn-primary" onclick="scrollToCalculator()">احسب النسبة الآن</button>
+                <button class="btn btn-secondary" onclick="scrollToArticles()">تعرف على المزيد</button>
+            </div>
+        </div>
+        
+        <!-- Laptop Animation -->
+        <div class="laptop">
+            <div class="screen">
+                <div class="header"></div>
+                <div class="card">
+                    <div class="top">
+                        <p class="title">script.py</p>
+                        <span class="buttons">
+                            <button class="minimize">
+                                <svg viewBox="0 0 10.2 1" y="0px" x="0px"><rect height="1" width="10.2" y="50%" x="0"></rect></svg>
+                            </button>
+                            <button class="maximize">
+                                <svg viewBox="0 0 10 10"><path d="M0,0v10h10V0H0z M9,9H1V1h8V9z"></path></svg>
+                            </button>
+                            <button class="close">
+                                <svg viewBox="0 0 10 10"><polygon points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1"></polygon></svg>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="topfix"></div>
+                    <hr>
+                    <div class="content">
+                        <p>
+                            <code>
+                                <i class="c1">import</i> os, sys<br>
+                                <b class="c2">os</b>.system<b class="c3">(</b><b class="c4">"title منصة نسبة"</b><b class="c3">)</b><br>
+                                <b class="c2">print</b><b class="c3">(</b><b class="c4">"مرحباً بك في منصة نسبة!"</b><b class="c3">)</b><br>
+                                <b class="c2">sys</b>.exit<b class="c3">(</b><b class="c3">)</b><br>
+                                <i class="comment">#منصة التمويل الذكي</i>
+                            </code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="keyboard"></div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h2 class="calculator-title">🧮 الحاسبة الشاملة</h2>
+                <p class="calculator-subtitle">احسب نسبة التمويل المتوقعة لشركتك في دقائق</p>
+            </div>
+
+            <div class="calculator-form-container">
+                <form class="calculator-form" id="calculatorForm">
+                    <div class="form-step active" data-step="1">
+                        <div class="step-header">
+                            <span class="step-number">1</span>
+                            <h3 class="step-title">نوع النشاط التجاري</h3>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" name="businessType" required>
+                                <option value="">اختر نوع النشاط التجاري</option>
+                                <option value="retail">تجارة التجزئة</option>
+                                <option value="wholesale">تجارة الجملة</option>
+                                <option value="manufacturing">التصنيع</option>
+                                <option value="services">الخدمات</option>
+                                <option value="construction">البناء والتشييد</option>
+                                <option value="technology">التكنولوجيا</option>
+                                <option value="healthcare">الرعاية الصحية</option>
+                                <option value="education">التعليم</option>
+                                <option value="restaurants">المطاعم والطعام</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <div class="step-header">
+                            <span class="step-number">2</span>
+                            <h3 class="step-title">الإيرادات السنوية للشركة</h3>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" name="annualRevenue" required>
+                                <option value="">اختر الإيرادات السنوية</option>
+                                <option value="less-187500">أقل من 187,500 ريال</option>
+                                <option value="187500-375000">187,500 - 375,000 ريال</option>
+                                <option value="375000-937500">375,000 - 937,500 ريال</option>
+                                <option value="937500-1875000">937,500 - 1,875,000 ريال</option>
+                                <option value="1875000-3750000">1,875,000 - 3,750,000 ريال</option>
+                                <option value="more-3750000">أكثر من 3,750,000 ريال</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <div class="step-header">
+                            <span class="step-number">3</span>
+                            <h3 class="step-title">نسبة الربح السنوية</h3>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" name="profitMargin" required>
+                                <option value="">اختر نسبة الربح</option>
+                                <option value="less-10">أقل من 10%</option>
+                                <option value="10-20">10% - 20%</option>
+                                <option value="20-30">20% - 30%</option>
+                                <option value="30-40">30% - 40%</option>
+                                <option value="40-50">40% - 50%</option>
+                                <option value="more-50">أكثر من 50%</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="4">
+                        <div class="step-header">
+                            <span class="step-number">4</span>
+                            <h3 class="step-title">عدد الموظفين</h3>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" name="employees" required>
+                                <option value="">اختر عدد الموظفين</option>
+                                <option value="1-5">1 - 5 موظفين</option>
+                                <option value="6-10">6 - 10 موظفين</option>
+                                <option value="11-25">11 - 25 موظف</option>
+                                <option value="26-50">26 - 50 موظف</option>
+                                <option value="51-100">51 - 100 موظف</option>
+                                <option value="more-100">أكثر من 100 موظف</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="5">
+                        <div class="step-header">
+                            <span class="step-number">5</span>
+                            <h3 class="step-title">عمر الشركة</h3>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" name="companyAge" required>
+                                <option value="">اختر عمر الشركة</option>
+                                <option value="less-1">أقل من سنة واحدة</option>
+                                <option value="1-2">1 - 2 سنة</option>
+                                <option value="3-5">3 - 5 سنوات</option>
+                                <option value="6-10">6 - 10 سنوات</option>
+                                <option value="11-20">11 - 20 سنة</option>
+                                <option value="more-20">أكثر من 20 سنة</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="6">
+                        <div class="step-header">
+                            <span class="step-number">6</span>
+                            <h3 class="step-title">مبلغ القرض المطلوب</h3>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-select" name="loanAmount" required>
+                                <option value="">اختر مبلغ القرض</option>
+                                <option value="less-93750">أقل من 93,750 ريال</option>
+                                <option value="93750-187500">93,750 - 187,500 ريال</option>
+                                <option value="187500-375000">187,500 - 375,000 ريال</option>
+                                <option value="375000-937500">375,000 - 937,500 ريال</option>
+                                <option value="937500-1875000">937,500 - 1,875,000 ريال</option>
+                                <option value="more-1875000">أكثر من 1,875,000 ريال</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" id="prevStep" disabled>← الخطوة السابقة</button>
+                        <div class="step-indicator">
+                            <span class="current-step">1</span> من <span class="total-steps">6</span>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="nextStep">الخطوة التالية →</button>
+                    </div>
+
+                    <div class="form-submit-container" style="display: none;">
+                        <button type="submit" class="btn btn-primary btn-large">احسب الأهلية والتمويل</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section" id="articles">
+        <div class="articles-container">
+            <div class="articles-header">
+                <h2 class="articles-title">أحدث المقالات والرؤى</h2>
+                <p class="articles-subtitle">اكتشف أحدث الأفكار والنصائح في عالم التمويل والأعمال</p>
+            </div>
+
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-category">تمويل</div>
+                    <div class="article-content">
+                        <h3 class="article-title">دليل شامل لتمويل المشاريع الصغيرة</h3>
+                        <p class="article-excerpt">تمويل المشاريع الصغيرة والمتوسطة هو أحد أهم التحديات التي تواجه رواد الأعمال، خاصة في المراحل الأولى من إطلاق المشروع أو عند الرغبة في التوسع.</p>
+                        <div class="article-meta">
+                            <span class="article-read-time">8 دقائق</span>
+                            <a href="#" class="article-link">اقرأ المزيد →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-category">تمويل</div>
+                    <div class="article-content">
+                        <h3 class="article-title">كيفية تحسين نسبة التمويل لشركتك</h3>
+                        <p class="article-excerpt">في بيئة الأعمال التنافسية اليوم، الحصول على التمويل المناسب يمثل خطوة محورية لنمو وتوسع أي شركة، سواء كانت ناشئة أو قائمة.</p>
+                        <div class="article-meta">
+                            <span class="article-read-time">7 دقائق</span>
+                            <a href="#" class="article-link">اقرأ المزيد →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-category">تخطيط</div>
+                    <div class="article-content">
+                        <h3 class="article-title">أهمية التخطيط المالي للشركات الناشئة</h3>
+                        <p class="article-excerpt">تُعد الشركات الناشئة من أكثر أنواع المشاريع تحدياً في عالم الأعمال بسبب طبيعتها الديناميكية والمخاطر العالية التي تواجهها، خاصة في الجانب المالي.</p>
+                        <div class="article-meta">
+                            <span class="article-read-time">9 دقائق</span>
+                            <a href="#" class="article-link">اقرأ المزيد →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/image_0.png" alt="شعار نسبة" class="footer-logo">
+                    <p class="footer-description">منصة تمويل الشركات الرائدة في المملكة العربية السعودية</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">الخدمات</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">حاسبة التمويل</a></li>
+                            <li><a href="#" class="footer-link">تقييم الأهلية</a></li>
+                            <li><a href="#" class="footer-link">الاستشارات المالية</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">الموارد</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">المقالات</a></li>
+                            <li><a href="#" class="footer-link">الأدلة</a></li>
+                            <li><a href="#" class="footer-link">الأسئلة الشائعة</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">تواصل معنا</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">info@nsbh.co</a></li>
+                            <li><a href="#" class="footer-link">+966 50 123 4567</a></li>
+                            <li><a href="#" class="footer-link">الرياض، المملكة العربية السعودية</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 نسبة. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="footer-developer">
+                    <p>تم التطوير بواسطة <a href="#" class="developer-link">Qirat Advisory - Strategic Advisory Services</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Dock Navigation -->
+    <div class="mobile-dock" id="mobileDock">
+        <div class="dock-panel">
+            <div class="dock-item" data-label="الرئيسية">
+                <div class="dock-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <div class="dock-item" data-label="الخدمات">
+                <div class="dock-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="dock-item" data-label="الحلول">
+                <div class="dock-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="dock-item" data-label="الموارد">
+                <div class="dock-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="dock-item" data-label="تواصل معنا">
+                <div class="dock-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
